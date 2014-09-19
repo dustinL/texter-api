@@ -1,0 +1,13 @@
+<div class="heading">
+  <h2>Messages</h2>
+</div>
+
+<div class="messages-body">
+  <% @messages.each.do |message| %>
+    <div class="message-each"><%= message %></div>
+  <% end %>
+</div>
+
+<div class="messages-body">
+  <%= link_to "Add New Message", new_message_path %>
+</div>
