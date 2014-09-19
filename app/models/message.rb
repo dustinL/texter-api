@@ -18,7 +18,6 @@ class Message < ActiveRecord::Base
         message = JSON.parse(error.response)['message']
         errors.add(:base, message)
         false
-        binding.pry
       end
     end
 

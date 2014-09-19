@@ -15,3 +15,37 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.messagebox {
+  border: 1px solid #0f5226;
+  border-radius: 5px;
+  background: #87a892;
+  margin: 15px;
+}
+.heading {
+  border: 1px solid #0f5226;
+  background: #87a892;
+}
+.heading h2 {
+  color: white;
+  text-shadow: black 0.1em 0.1em 0.1em;
+}
+.addnew {
+  color: white;
+}
+.addnew:hover {
+  color: black;
+}
+.message-each {
+  padding-left: 5px;
+  padding-right: 15px;
+  font-size: 1.4em;
+  color: white;
+}
+.message-each-body {
+  color: black;
+}
+
+
+
+

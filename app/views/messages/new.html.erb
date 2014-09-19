@@ -11,7 +11,7 @@
 <% end%>
 
 <div class="form-group">
-  <%= form_for @message, :html => {:class => "form-horizontal center", :role =>"form"} do |f| %>
+  <%= form_for @message do |f| %>
   <%= f.label :to %>
   <%= f.text_field :to %>
   <%= f.label :from %>

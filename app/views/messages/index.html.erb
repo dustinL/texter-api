@@ -1,15 +1,23 @@
 <% content_for(:title, "Messaging Shmessaging" ) %>
+<div class="container-fluid">
 
-<div class="heading">
-  <h2>Messages</h2>
+<div class="row">
+  <div class="heading col-xs-9">
+    <h2>Messages</h2>
+  </div>
+  <div class="heading col-xs-3">
+    <h2><%= link_to "Add New Message", new_message_path, :class => "addnew" %></h2>
+  </div>
 </div>
 
-<div class="messages-body">
+<div class="col-xs-12 messages-body">
   <% @messages.each do |message| %>
-    <div class="message-each"><%= message %></div>
+    <div class="messagebox">
+      <div class="message-each">From: <span class="message-each-body"><%= message.from %></span></div>
+      <div class="message-each">To: <span class="message-each-body"><%= message.to %></span></div>
+      <div class="message-each">Message: <span class="message-each-body"><%= message.body %></span></div>
+    </div>
   <% end %>
 </div>
 
-<div class="messages-body">
-  <%= link_to "Add New Message", new_message_path %>
 </div>
