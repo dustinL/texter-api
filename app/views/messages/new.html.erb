@@ -1,9 +1,23 @@
+<% content_for(:title, "New Message" ) %>
+
 <div class="heading">
   <h2>New Message</h2>
 </div>
 
-<div>
-  <%= form_for   %>
-
+<% if @message.errors.any? %>
+  <% @message.errors.full_messages.each do |message| %>
+    <% flash[:alert] = message %>
   <% end %>
-</div>
+<% end%>
+
+<div class="form-group">
+  <%= form_for @message, :html => {:class => "form-horizontal center", :role =>"form"} do |f| %>
+  <%= f.label :to %>
+  <%= f.text_field :to %>
+  <%= f.label :from %>
+  <%= f.text_field :from %>
+  <%= f.label :body %>
+  <%= f.text_field :body %>
+  <%= f.submit(:class =>"btn btn-primary") %>
+  </div>
+<% end %>

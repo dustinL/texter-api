@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>TextingApp</title>
+<title><%= yield(:title) %></title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -10,5 +10,18 @@
 
 <%= yield %>
 
+<div id='flash_notice'>
+    <% if flash[:notice] == 'Successful' %>
+      <div class='alert alert-success' role='alert'>
+        <%= flash[:notice] %></div>
+    <% elsif flash[:notice] != nil %>
+      <div class='alert alert-info' role='alert'>
+        <%= flash[:notice] %></div>
+    <% end %>
+    <% if flash[:alert] != nil %>
+      <div class='alert alert-danger' role='alert'>
+        <%= flash[:alert] %></div>
+    <% end %>
+  </div>
 </body>
 </html>

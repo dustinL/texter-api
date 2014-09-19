@@ -1,9 +1,11 @@
+<% content_for(:title, "Messaging Shmessaging" ) %>
+
 <div class="heading">
   <h2>Messages</h2>
 </div>
 
 <div class="messages-body">
-  <% @messages.each.do |message| %>
+  <% @messages.each do |message| %>
     <div class="message-each"><%= message %></div>
   <% end %>
 </div>
