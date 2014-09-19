@@ -27,7 +27,7 @@ group :test, :development do
   gem 'pry'
   gem 'database_cleaner'
   gem 'dotenv-rails'
- # gem 'letter_opener'
+  gem 'letter_opener'
 end
 
 group :test do
