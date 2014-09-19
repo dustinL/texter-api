@@ -36,7 +36,6 @@ group :test do
   gem 'poltergeist'
   gem "factory_girl_rails"
   gem 'vcr'
-  gem 'webmock'
 end
 
 group :production do
